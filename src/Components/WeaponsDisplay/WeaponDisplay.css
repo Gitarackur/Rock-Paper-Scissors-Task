@@ -1,0 +1,151 @@
+
+/*small screens*/
+@media (max-width: 499px) {
+
+    .WeaponDisplay{
+        width: 100%;
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .WeaponDisplay .name{
+        text-align: center;
+        font-size: 16px;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .WeaponDisplay .weapon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+    }
+
+    .WeaponDisplay .weapon img{
+        border-radius: 50%;
+        height: 150px;
+        width: 70%;
+        display: block;
+    }
+
+    .WeaponDisplay .points{
+        text-align: center;
+        width: 20%;
+        /* background-color: #fff;
+        color: #000; */
+        border-radius: 15px;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/*small screens*/
+@media (min-width: 500px) and (max-width: 600px)  {
+
+    .WeaponDisplay{
+        width: 50%;
+    }
+
+    .WeaponDisplay .weapon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* box-shadow: 0 0 0 0px rgba(255,255,255,.04), 0 0 0 0px rgba(255,255,255,.04), 0 0 0 0px rgba(255,255,255,.02); */
+    }
+
+    .WeaponDisplay .name{
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .WeaponDisplay .weapon img{
+        border-radius: 50%;
+        height: 70px;
+        width: 70px;
+        display: block;
+    }
+
+    .WeaponDisplay .points{
+        text-align: center;
+        font-size: 20px;
+        padding-top: 5px;
+    }
+
+}
+
+
+/*medium screens*/
+@media (min-width: 601px) and (max-width: 1024px)  {
+
+    .WeaponDisplay{
+        width: 50%;
+    }
+
+    .WeaponDisplay .name{
+        text-align: center;
+        font-size: 16px;
+        padding-bottom: 30px ;
+    }
+
+    .WeaponDisplay .weapon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .WeaponDisplay .weapon img{
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        display: block;
+    }
+
+    .WeaponDisplay .points{
+        text-align: center;
+        font-size: 30px;
+        padding-top: 30px;
+    }
+
+}
+
+
+/*large screens*/
+@media (min-width: 1025px) {
+    .WeaponDisplay{
+        width: 50%;
+        appearance: button;
+        cursor: pointer;
+    }
+
+    .WeaponDisplay .name{
+        text-align: center;
+        font-size: 16px;
+        padding-bottom: 30px ;
+    }
+
+    .WeaponDisplay .weapon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .WeaponDisplay .weapon img{
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        display: block;
+    }
+
+    .WeaponDisplay .points{
+        text-align: center;
+        font-size: 30px;
+        padding: 3%;
+    }
+
+}
+
+

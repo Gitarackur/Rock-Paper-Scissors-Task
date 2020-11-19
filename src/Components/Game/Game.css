@@ -1,0 +1,475 @@
+.body{
+    height: 100%;
+    background-color: #040404;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.body.bonus{
+    height: 100%;
+    background-color: #122343;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-size: calc(10px + 2vmin);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.Header{
+    text-transform: uppercase;
+}
+
+.Header.bonus{
+    position: relative;
+    margin: auto;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.Header.bonus:after{
+    position: absolute;
+    content: 'BONUS';
+    margin-left: 1%;
+    width: 50px;
+    height: 50px;
+    background: yellow;
+    color: #000;
+    font-weight: bolder;
+    border-radius: 50%;
+    font-size: 12px;
+    text-align: center;
+    line-height: 380%;
+}
+
+.StartGame{
+    width: 40%;
+    margin: auto;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    background: transparent;
+    color: #fff;
+    padding: 3%;
+    border: 1px solid white;
+    outline: none;
+    display: block;
+}
+
+.StartGame:active,
+.QuitGame:active
+{
+    transform: scale(.9);
+}
+
+.StartGame.bonus{
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.QuitGame.bonus{
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.Weapons div.bonus{
+    border: 10px solid #000;
+    box-shadow: 0 2px 0 #000;
+}
+
+.Rules{
+    position: fixed;
+    left: 0;
+    top: 42%;
+    width:50px; 
+    height: 50px; 
+    border-radius: 50%;
+    outline: none;
+    background-color: black;
+    color: #fff;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.Rules:active {
+    transform: scale(.9);
+}
+
+.MainImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.MainImage img{
+    width: 50%;
+    height: 50%;
+}
+
+
+
+/*small screens*/
+@media (max-width: 499px) {
+    .MainImage{
+        width: 100%;
+        height: 500px;
+    }
+
+    .Header{
+        text-align: center;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    
+    .Header.bonus{
+        width: 70%;
+        padding: 2%;
+    }
+
+    .DisplayZone{
+        width: 100%;
+        display: block;
+    }
+
+    .gameButtons{
+        width: 100%;
+        display: flex;
+        margin: auto;
+    }
+
+    .Weapons{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .Weapons div{
+        width: 70px;
+        height: 70px;
+        border: 10px solid yellow;
+        box-sizing: border-box;
+        border-radius: 50%;
+        display: flex;
+        box-shadow: 0 2px 0 yellow;
+        cursor: pointer;
+        box-shadow: 0 0 0 0px rgba(255,255,255,.04), 0 0 0 0px rgba(255,255,255,.04), 0 0 0 0px rgba(255,255,255,.02);
+    }
+    
+    .Weapons div img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .Weapons img:active {
+        transform: scale(.9);
+    }
+
+    .QuitGame{
+        width: 40%;
+        margin: auto;
+        border-radius: 20px;
+        background: transparent;
+        color: #fff;
+        padding: 20px;
+        border: 1px solid white;
+        outline: none;
+        display: block;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    } 
+
+}
+
+
+
+
+
+
+
+
+
+
+/*small screens*/
+@media (min-width: 500px) and (max-width: 600px)  {
+    
+    .MainImage{
+        width: 100%;
+        height: 500px;
+    }
+
+    .Header{
+        text-align: center;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    .Header.bonus{
+        width: 60%;
+    }
+
+    .DisplayZone{
+        width: 90%;
+        display: flex;
+        margin: auto;
+    }
+  
+    .Weapons{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Weapons div{
+        display: flex;  
+        width: 80px;
+        height: 80px;
+        border: 10px solid yellow;
+        box-sizing: border-box;
+        border-radius: 50%;
+        display: flex;
+        box-shadow: 0 2px 0 yellow;
+        cursor: pointer;
+        box-shadow: 0 0 0 0px rgba(255,255,255,.04), 0 0 0 0px rgba(255,255,255,.04), 0 0 0 0px rgba(255,255,255,.02);
+    }
+    
+    .Weapons div:active {
+        transform: scale(.9);
+    }
+
+    .Weapons div img{
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .gameButtons{
+        width: 100%;
+        display: flex;
+        margin: auto;
+    }
+
+    .QuitGame{
+        width: 40%;
+        margin: auto;
+        border-radius: 20px;
+        background: transparent;
+        color: #fff;
+        padding: 20px;
+        border: 1px solid white;
+        outline: none;
+        display: block;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    } 
+
+}
+
+
+/*medium screens*/
+@media (min-width: 601px) and (max-width: 1024px)  {
+
+    .MainImage{
+        width: 100%;
+        height: 450px;
+    }
+    
+    .Header{
+        text-align: center;
+        width: 50%;
+        display: block;
+        margin: auto;
+    }
+
+    .Header.bonus{
+        width: 50%;
+    }
+
+    .game-container{
+        display: flex;
+        width: 100%;
+    }
+    
+    .game-Grid1{
+        display: block;
+        width: 63%;
+    }
+    
+    .game-Grid2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 37%;
+    }
+
+    .DisplayZone{
+        width: 80%;
+        display: flex;
+        margin: auto;
+    }
+
+    .gameButtons{
+        width: 100%;
+        display: flex;
+        margin: auto;
+    }  
+    
+    .Weapons{
+        width: 100%;
+        display: flex;  
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Weapons div{
+        display: flex;  
+        width: 70px;
+        height: 70px;
+        border: 10px solid yellow;
+        box-sizing: border-box;
+        border-radius: 50%;
+        box-shadow: 0 2px 0 yellow;
+        cursor: pointer;
+        box-shadow: 0 0 0 0px rgba(255,255,255,.04), 0 0 0 0px rgba(255,255,255,.04), 0 0 0 0px rgba(255,255,255,.02);
+    }
+
+    .Weapons div img:active {
+        transform: scale(.9);
+    }
+
+    .Weapons div img{
+        border-radius: 50%;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;   
+    }
+
+    .QuitGame{
+        width: 90%;
+        margin: auto;
+        border-radius: 20px;
+        background: transparent;
+        color: #fff;
+        padding: 20px;
+        border: 1px solid white;
+        outline: none;
+        display: block;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }  
+
+}
+
+
+/*large screens*/
+@media (min-width: 1025px) {
+
+    .MainImage{
+        width: 100%;
+        height: 500px;
+    }
+    
+    .Header{
+        text-align: center;
+        width: 50%;
+        display: block;
+        margin: auto;
+    }
+
+    .Header-bonus{
+        width: 30%;
+    }
+
+    .game-container{
+        display: flex;
+        width: 100%;
+    }
+    
+    .game-Grid1{
+        display: block;
+        width: 65%;
+    }
+    
+    .game-Grid2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35%;
+    }
+
+    .DisplayZone{
+        width: 50%;
+        display: flex;
+        margin: auto;
+    }
+
+    .Weapons{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Weapons div{
+        display: flex;
+        border: 1px solid white;
+        width: 80px;
+        height: 80px;
+        border: 10px solid yellow;
+        box-sizing: border-box;
+        border-radius: 50%;
+        box-shadow: 0 2px 0 yellow;
+        cursor: pointer;
+        box-shadow: 0 0 0 0px rgba(255,255,255,.04), 0 0 0 0px rgba(255,255,255,.04), 0 0 0 0px rgba(255,255,255,.02);
+    }
+    .Weapons div img:active {
+        transform: scale(.9);
+    }
+
+    .Weapons div img{
+        margin: auto;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .gameButtons{
+        width: 100%;
+        display: flex;
+        margin: auto;
+    }
+
+    .QuitGame{
+        width: 40%;
+        margin: auto;
+        border-radius: 20px;
+        background: transparent;
+        color: #fff;
+        padding: 20px;
+        border: 1px solid white;
+        outline: none;
+        display: block;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    } 
+    
+}
+
+
+
+
