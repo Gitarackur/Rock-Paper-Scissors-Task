@@ -6,6 +6,7 @@ import Rock from '../../images/Rock.png'
 import Scissors from '../../images/Scissors.png'
 import Rps from '../../images/Rps.png'
 import Modal from '../Modal/Modal'
+import ToggleBtn from '../ToggleBtn/ToggleBtn'
 
 
 const Game = () => {
@@ -101,6 +102,9 @@ const Game = () => {
         }else{
             settext(`It is a draw`)
         }
+
+        setplayer(null);
+        setcomputer(null);
     }
 
     const quitGame=()=>{
@@ -128,7 +132,22 @@ const Game = () => {
     return (
         <div className={bonusGame===!true ? 'body':'body bonus'}>
             <h1 className={bonusGame ? 'Header bonus': 'Header'}>Rock Paper Scissors</h1>
-
+            {
+                gamePlaying ?(
+                    <span style={{float: "right", padding: '2%'}}>
+                        <ToggleBtn
+                            selected={bonusGame}
+                            toggleSelected={() => {
+                                setgamePlaying(true);
+                                setbonusGame(!bonusGame);
+                            }}
+                        />
+                    </span>
+                ):(
+                    null
+                )
+            }
+            
             {
                 gamePlaying ?(
                     <div className='game-container'>
@@ -169,7 +188,7 @@ const Game = () => {
                                 <div className='gameButtons'>
                                     <button className={bonusGame===!true ? 'QuitGame':'QuitGame bonus'} onClick={checkWinner}>See Scores</button>
                                     <button className={bonusGame===!true ? 'QuitGame':'QuitGame bonus'} onClick={quitGame}>Quit game</button>
-                                    <button className={bonusGame===!true ? 'QuitGame':'QuitGame bonus'} onClick={refreshGame}>Refresh</button>
+                                    <button className={bonusGame===!true ? 'QuitGame':'QuitGame bonus'} onClick={refreshGame}>Play Again</button>
                                 </div>
 
                             </div>
@@ -182,8 +201,7 @@ const Game = () => {
                             <img src={Rps} alt='Rock'/>
                         </div>
                         <div className='gameButtons'>
-                            <button className={bonusGame===!true ? 'StartGame':'StartGame bonus'} onClick={()=>{setgamePlaying(true); setbonusGame(true)}}>Play Bonus Game</button>
-                            <button className={bonusGame===!true ? 'StartGame':'StartGme bonus'} onClick={()=>{setgamePlaying(true)}}>Play Normal Game</button>
+                            <button className={bonusGame===!true ? 'StartGame':'StartGame bonus'} onClick={()=>{setgamePlaying(true)}}>Play Game</button>
                         </div>
                     </div>
                 )

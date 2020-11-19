@@ -15,7 +15,15 @@ const WeaponDisplay = (props) => {
             </div>
 
             <div className='weapon'>
-                <img src={props.weapon==='Rock'? Rock: props.weapon==='Scissors'? Scissors : props.weapon==='Paper' ? Paper : props.bonusGame && props.weapon ? QuestionWhite : Question1} alt='Rock'/>
+                <img 
+                    src={
+                    props.weapon==='Rock'? Rock
+                    : props.weapon==='Scissors'? Scissors 
+                    : props.weapon==='Paper' ? Paper 
+                    : !props.bonusGame && !props.weapon ? QuestionWhite 
+                    : Question1} 
+                    alt='Rock'
+                />
             </div>
 
             <div className='points'>

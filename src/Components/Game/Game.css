@@ -49,17 +49,23 @@
     line-height: 380%;
 }
 
+.QuitGame{
+    cursor: pointer;
+}
+
 .StartGame{
     width: 40%;
+    padding: 15px;
+     /* padding: 3%; */
     margin: auto;
     margin-bottom: 40px;
     border-radius: 20px;
     background: transparent;
     color: #fff;
-    padding: 3%;
     border: 1px solid white;
     outline: none;
     display: block;
+    cursor: pointer;
 }
 
 .StartGame:active,
@@ -83,6 +89,23 @@
     box-shadow: 0 2px 0 #000;
 }
 
+@keyframes anim{
+    from{
+        /* box-shadow: 0 1px 2px white;
+        transition: box-shadow 0.3s ease-in-out; */
+        -webkit-box-shadow: 0px -1px 0px -4px rgba(255,255,255,1);
+        -moz-box-shadow: 0px -1px 0px -4px rgba(255,255,255,1);
+        box-shadow: 0px -1px 0px -4px rgba(255,255,255,1);
+    }
+    to{
+        /* box-shadow: 0 5px 15px white;
+        transition: box-shadow 0.3s ease-in-out; */
+        -webkit-box-shadow: 0px -1px 50px -4px rgba(255,255,255,1);
+        -moz-box-shadow: 0px -1px 50px -4px rgba(255,255,255,1);
+        box-shadow: 0px -1px 50px -4px rgba(255,255,255,1);
+    }
+}
+
 .Rules{
     position: fixed;
     left: 0;
@@ -95,6 +118,8 @@
     color: #fff;
     box-shadow: none;
     cursor: pointer;
+    animation: anim 1s 1s infinite;
+    border: none;
 }
 
 .Rules:active {
@@ -177,11 +202,11 @@
 
     .QuitGame{
         width: 40%;
+        padding: 3%;
         margin: auto;
         border-radius: 20px;
         background: transparent;
         color: #fff;
-        padding: 20px;
         border: 1px solid white;
         outline: none;
         display: block;
@@ -206,6 +231,7 @@
     .MainImage{
         width: 100%;
         height: 500px;
+        margin: auto;
     }
 
     .Header{
@@ -260,15 +286,18 @@
         width: 100%;
         display: flex;
         margin: auto;
+        box-sizing: border-box;
+        padding-left: 3%;
+        padding-right: 3%;
     }
 
     .QuitGame{
         width: 40%;
+        padding: 15px;
         margin: auto;
         border-radius: 20px;
         background: transparent;
         color: #fff;
-        padding: 20px;
         border: 1px solid white;
         outline: none;
         display: block;
@@ -283,8 +312,9 @@
 @media (min-width: 601px) and (max-width: 1024px)  {
 
     .MainImage{
-        width: 100%;
+        width: 50%;
         height: 450px;
+        margin: auto;
     }
     
     .Header{
@@ -320,12 +350,6 @@
         display: flex;
         margin: auto;
     }
-
-    .gameButtons{
-        width: 100%;
-        display: flex;
-        margin: auto;
-    }  
     
     .Weapons{
         width: 100%;
@@ -358,13 +382,19 @@
         height: 100%;   
     }
 
+    .gameButtons{
+        width: 100%;
+        display: flex;
+        margin: auto;
+    }  
+
     .QuitGame{
         width: 90%;
+        padding: 13px;
         margin: auto;
         border-radius: 20px;
         background: transparent;
         color: #fff;
-        padding: 20px;
         border: 1px solid white;
         outline: none;
         display: block;
@@ -379,8 +409,9 @@
 @media (min-width: 1025px) {
 
     .MainImage{
-        width: 100%;
-        height: 500px;
+        width: 50%;
+        height: 370px;
+        margin: auto;
     }
     
     .Header{
@@ -452,15 +483,17 @@
         width: 100%;
         display: flex;
         margin: auto;
+        box-sizing: border-box;
+        padding: 5%;
     }
 
     .QuitGame{
         width: 40%;
+        padding: 15px;
         margin: auto;
         border-radius: 20px;
         background: transparent;
         color: #fff;
-        padding: 20px;
         border: 1px solid white;
         outline: none;
         display: block;
