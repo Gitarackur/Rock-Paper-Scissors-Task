@@ -94,14 +94,12 @@ const Game = () => {
     }
 
     const checkWinner=()=>{
-        if(bonusGame=== true){
-            if(playerPoints > computerPoints){
-                settext(`Player Wins Computer by ${playerPoints}:${computerPoints}`)
-            }else if(playerPoints < computerPoints){
-                settext(`Player loses to Computer by ${playerPoints}:${computerPoints}`)
-            }else{
-                settext(`It is a draw`)
-            }
+        if(playerPoints > computerPoints){
+            settext(`Player Wins Computer by ${playerPoints}:${computerPoints}`)
+        }else if(playerPoints < computerPoints){
+            settext(`Player loses to Computer by ${playerPoints}:${computerPoints}`)
+        }else{
+            settext(`It is a draw`)
         }
     }
 
@@ -116,15 +114,14 @@ const Game = () => {
         setbonusGame(false);
     }
 
-    // const refreshGame=()=>{
-    //     setplayer(null);
-    //     setplayerPoints(0);
-    //     setcomputer(null);
-    //     setcomputerPoints(0);
-    //     setgamePlaying(null);
-    //     settext(null);
-    //     setbonusGame(false);
-    // }
+    const refreshGame=()=>{
+        setplayer(null);
+        setplayerPoints(0);
+        setcomputer(null);
+        setcomputerPoints(0);
+        setgamePlaying(true);
+        settext(null);
+    }
 
 
 
@@ -172,6 +169,7 @@ const Game = () => {
                                 <div className='gameButtons'>
                                     <button className={bonusGame===!true ? 'QuitGame':'QuitGame bonus'} onClick={checkWinner}>See Scores</button>
                                     <button className={bonusGame===!true ? 'QuitGame':'QuitGame bonus'} onClick={quitGame}>Quit game</button>
+                                    <button className={bonusGame===!true ? 'QuitGame':'QuitGame bonus'} onClick={refreshGame}>Refresh</button>
                                 </div>
 
                             </div>
